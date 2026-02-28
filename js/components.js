@@ -6,7 +6,7 @@ function renderNavbar(activePage) {
     <div class="container">
       <div class="nav-inner">
         <a href="index.html" class="nav-logo">
-          <div class="logo-mark">L</div>
+          <img src="assets/Logo LEAP.png" style="height:42px" alt="LEAP Logo" />
           <div class="logo-text">
             <span class="logo-name">LEAP</span>
             <span class="logo-tagline">Business Solutions</span>

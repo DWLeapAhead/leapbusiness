@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labour Law Registrations – PF, ESIC, PT, CLRA, LWF, BOCW, S&E | LEAP Business Solutions</title>
+  <meta name="description" content="Expert assistance for PF, ESIC, PT, CLRA, LWF, BOCW and Shop & Establishment registrations across India. End-to-end compliance support by LEAP Business Solutions." />
+  <link rel="canonical" href="https://www.leapbusiness.in/registrations.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ── Registration Tabs ─────────────────────────────── */
+    .reg-tabs-bar {
+      background: var(--white);
+      border-bottom: 2px solid var(--border);
+      position: sticky;
+      top: 72px;
+      z-index: 90;
+      box-shadow: 0 2px 12px rgba(26,79,120,0.07);
+    }
+    .reg-tabs-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .reg-tabs-inner::-webkit-scrollbar { display: none; }
+    .reg-tab-btn {
+      flex-shrink: 0;
+      background: none;
+      border: none;
+      padding: 18px 22px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.25s, border-color 0.25s;
+      white-space: nowrap;
+    }
+    .reg-tab-btn:hover { color: var(--primary); }
+    .reg-tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--secondary);
+    }
+
+    /* ── Tab Panels ───────────────────────────────────── */
+    .reg-panel { display: none; }
+    .reg-panel.active { display: block; }
+
+    /* ── Overview Banner ──────────────────────────────── */
+    .reg-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #2a6fa8 100%);
+      color: var(--white);
+      padding: 64px 24px;
+    }
+    .reg-hero-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 48px;
+      align-items: center;
+    }
+    .reg-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      margin: 0 0 16px;
+      line-height: 1.2;
+    }
+    .reg-hero p {
+      font-size: 16px;
+      line-height: 1.7;
+      opacity: 0.88;
+      margin: 0 0 28px;
+    }
+    .reg-hero-badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .reg-badge {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 40px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .reg-hero-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      backdrop-filter: blur(8px);
+    }
+    .reg-hero-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0 0 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.7;
+    }
+    .quick-stat {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      font-size: 14px;
+    }
+    .quick-stat:last-child { border-bottom: none; }
+    .quick-stat .label { opacity: 0.75; }
+    .quick-stat .value { font-weight: 600; }
+
+    /* ── Content Sections ─────────────────────────────── */
+    .reg-content {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 64px 24px;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 48px;
+      align-items: start;
+    }
+    .reg-main { }
+    .reg-sidebar { }
+
+    /* ── Section blocks ───────────────────────────────── */
+    .info-block {
+      margin-bottom: 40px;
+    }
+    .info-block h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--secondary-faint);
+    }
+    .info-block h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 20px 0 12px;
+    }
+    .info-block p {
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin: 0 0 12px;
+    }
+
+    /* ── Checklist ────────────────────────────────────── */
+    .checklist {
+      list-style: none;
+      margin: 0 0 16px;
+      padding: 0;
+    }
+    .checklist li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14.5px;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: rgba(50,153,194,0.1);
+      color: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 1px;
+    }
+
+    /* ── Applicability Table ──────────────────────────── */
+    .applic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    .applic-table th {
+      background: var(--background-light);
+      color: var(--primary);
+      font-weight: 600;
+      padding: 10px 14px;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .applic-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+    .applic-table tr:hover td { background: var(--background-light); }
+    .badge-yes {
+      background: #e6f7ee;
+      color: #1a7a45;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* ── Timeline Steps ───────────────────────────────── */
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .steps-list li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding-bottom: 24px;
+      position: relative;
+    }
+    .steps-list li:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 36px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      z-index: 1;
+    }
+    .step-text strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .step-text span {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ── Sidebar CTA Card ─────────────────────────────── */
+    .cta-card {
+      background: var(--primary);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .cta-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
+    .cta-card p {
+      font-size: 14px;
+      opacity: 0.85;
+      line-height: 1.6;
+      margin: 0 0 24px;
+    }
+    .cta-card .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: var(--radius);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: var(--transition);
+    }
+    .cta-card .btn-white {
+      background: var(--white);
+      color: var(--primary);
+    }
+    .cta-card .btn-white:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
+    .cta-card .btn-wa {
+      background: #25D366;
+      color: var(--white);
+    }
+    .cta-card .btn-wa:hover {
+      background: #1ebe5c;
+      transform: translateY(-2px);
+    }
+
+    .info-sidebar-card {
+      background: var(--background-light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .info-sidebar-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0 0 14px;
+    }
+    .info-sidebar-card ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+    .info-sidebar-card ul li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+
+    /* ── Page Hero (breadcrumb) ───────────────────────── */
+    .page-hero {
+      background: var(--background-light);
+      padding: 32px 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding-bottom: 24px;
+    }
+    .breadcrumb {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .breadcrumb a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .page-hero-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0 0 6px;
+    }
+    .page-hero-inner p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* ── Responsive ───────────────────────────────────── */
+    @media (max-width: 900px) {
+      .reg-hero-inner,
+      .reg-content {
+        grid-template-columns: 1fr;
+      }
+      .reg-hero-card { display: none; }
+      .reg-sidebar { order: -1; }
+      .cta-card { padding: 24px 20px; }
+    }
+    @media (max-width: 600px) {
+      .reg-tab-btn { padding: 14px 14px; font-size: 13px; }
+      .reg-hero { padding: 44px 16px; }
+      .reg-content { padding: 40px 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar (injected by JS) -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Page breadcrumb bar -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> &rsaquo; Registrations
+      </div>
+      <h2>Labour Law Registrations</h2>
+      <p>Mandatory compliance registrations for businesses across India — handled end-to-end by LEAP.</p>
+    </div>
+  </div>
+
+  <!-- Tab navigation bar -->
+  <div class="reg-tabs-bar">
+    <div class="reg-tabs-inner">
+      <button class="reg-tab-btn active" data-tab="pf">PF / EPF</button>
+      <button class="reg-tab-btn" data-tab="esic">ESIC</button>
+      <button class="reg-tab-btn" data-tab="pt">Professional Tax</button>
+      <button class="reg-tab-btn" data-tab="clra">CLRA</button>
+      <button class="reg-tab-btn" data-tab="lwf">LWF</button>
+      <button class="reg-tab-btn" data-tab="bocw">BOCW</button>
+      <button class="reg-tab-btn" data-tab="se">Shop &amp; Establishment</button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════
+       TAB: PF / EPF
+  ═════════════════════════════════════════════════════ -->
+  <div class="reg-panel active" id="panel-pf">
+
+    <div class="reg-hero">
+      <div class="reg-hero-inner">
+        <div>
+          <span class="tag">Central Act</span>
+          <h1>Employees' Provident Fund (EPF) Registration</h1>
+          <p>Under the Employees' Provident Fund &amp; Miscellaneous Provisions Act, 1952, every establishment employing 20 or more persons must register with the EPFO. LEAP handles the end-to-end registration process so you're covered from Day 1.</p>
+          <div class="reg-hero-badges">
+            <span class="reg-badge">🏛️ Central Registration</span>
+            <span class="reg-badge">👥 20+ Employees</span>
+            <span class="reg-badge">⏱️ 3–5 Working Days</span>
+            <span class="reg-badge">🌐 Online (EPFO Portal)</span>
+          </div>
+        </div>
+        <div class="reg-hero-card">
+          <h3>At a Glance</h3>
+          <div class="quick-stat"><span class="label">Governing Act</span><span class="value">EPF &amp; MP Act, 1952</span></div>
+          <div class="quick-stat"><span class="label">Threshold</span><span class="value">20+ employees</span></div>
+          <div class="quick-stat"><span class="label">Contribution</span><span class="value">12% + 12% of Basic</span></div>
+          <div class="quick-stat"><span class="label">Mode</span><span class="value">Online – EPFO Portal</span></div>
+          <div class="quick-stat"><span class="label">Timeline</span><span class="value">3–5 working days</span></div>
+          <div class="quick-stat"><span class="label">Penalty for Delay</span><span class="value">Interest + damages</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-content">
+      <div class="reg-main">
+
+        <div class="info-block">
+          <h2>What is EPF Registration?</h2>
+          <p>The Employees' Provident Fund is a retirement savings scheme where both employer and employee contribute 12% of the employee's basic salary each month. Establishments with 20 or more employees are legally required to register within one month of reaching that threshold. Voluntary registration is permitted before that.</p>
+          <p>Once registered, the employer receives a PF Code (7-digit establishment code), which is used for all future compliance filings — monthly ECR (Electronic Challan cum Return), UAN generation, and annual returns.</p>
+        </div>
+
+        <div class="info-block">
+          <h2>Documents Required</h2>
+          <h3>A. Entity / Company Documents</h3>
+          <ul class="checklist">
+            <li>PAN Card of the Company / Firm / Proprietorship</li>
+            <li>Registration Proof — Certificate of Incorporation (Pvt Ltd / LLP), Partnership Deed, GST Registration Certificate, Shop &amp; Establishment License, or Factory License</li>
+            <li>Address Proof of Registered Office — Electricity Bill, Rent Agreement, or Property Tax Receipt</li>
+            <li>Cancelled Cheque of the current bank account (bearing company / firm name)</li>
+            <li>Nature of Work (brief description)</li>
+            <li>Date of Commencement of Business</li>
+            <li>Date when employee count crossed 19 (PF Coverage Date)</li>
+            <li>Specimen Signature Card – PF (format provided by LEAP)</li>
+            <li>Last Month Salary Register (with Male / Female bifurcation)</li>
+          </ul>
+
+          <h3>B. Proprietor / Partner / Director Details</h3>
+          <ul class="checklist">
+            <li>PAN Card and Aadhaar Card of the Proprietor / all Partners / all Directors</li>
+            <li>Details of Owners on company letterhead (signed &amp; stamped) — LEAP format enclosed</li>
+            <li>Mobile Number &amp; Email ID for OTP registration</li>
+          </ul>
+
+          <h3>C. Manager Details (Portal input only)</h3>
+          <ul class="checklist">
+            <li>Name &amp; Aadhaar Card of Manager</li>
+            <li>Mobile Number &amp; Email ID of Manager</li>
+            <li>Digital Signature Certificate (Class 3 DSC) of Authorised Signatory — required post-registration</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h2>Registration Process</h2>
+          <ol class="steps-list">
+            <li><div class="step-num">1</div><div class="step-text"><strong>Document Collection</strong><span>LEAP shares a checklist; you submit scanned PDFs of all required documents.</span></div></li>
+            <li><div class="step-num">2</div><div class="step-text"><strong>Portal Application</strong><span>LEAP files the application on the EPFO Unified Portal using EPFO Form — Establishment Registration.</span></div></li>
+            <li><div class="step-num">3</div><div class="step-text"><strong>OTP Verification</strong><span>OTPs are sent to the registered mobile and email for verification.</span></div></li>
+            <li><div class="step-num">4</div><div class="step-text"><strong>Review &amp; Approval</strong><span>EPFO reviews the application and documents. Any queries are responded to by LEAP on your behalf.</span></div></li>
+            <li><div class="step-num">5</div><div class="step-text"><strong>PF Code Issued</strong><span>Upon approval, a 7-digit PF establishment code is issued. LEAP assists with DSC registration for online ECR filing.</span></div></li>
+          </ol>
+        </div>
+
+      </div>
+      <div class="reg-sidebar">
+        <div class="cta-card">
+          <h3>Start PF Registration</h3>
+          <p>Get your PF Code in 3–5 working days. Share documents, we handle the rest.</p>
+          <a href="tel:+917977213501" class="btn btn-white">📞 Call Now — Free Consult</a>
+          <a href="https://wa.me/917977213501?text=Hi%20LEAP%2C%20I%20need%20help%20with%20PF%20Registration" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Us</a>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>Who Must Register?</h4>
+          <ul>
+            <li>Establishments with <strong>20 or more</strong> employees</li>
+            <li>Voluntary registration also permitted (under 20)</li>
+            <li>Once registered, coverage continues even if headcount drops below 20</li>
+          </ul>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>Consequences of Non-Registration</h4>
+          <ul>
+            <li>Penal damages up to 25% of arrears</li>
+            <li>Interest @ 12% p.a. on dues</li>
+            <li>Prosecution under Section 14 of the EPF Act</li>
+            <li>Directors/partners can be held personally liable</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-pf -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       TAB: ESIC
+  ═════════════════════════════════════════════════════ -->
+  <div class="reg-panel" id="panel-esic">
+
+    <div class="reg-hero">
+      <div class="reg-hero-inner">
+        <div>
+          <span class="tag">Central Act</span>
+          <h1>Employees' State Insurance (ESIC) Registration</h1>
+          <p>Under the ESI Act, 1948, establishments with 10 or more employees (20+ in some states) drawing wages up to ₹21,000/month must register. ESIC provides medical, sickness, maternity, and disability benefits to covered employees.</p>
+          <div class="reg-hero-badges">
+            <span class="reg-badge">🏛️ Central Registration</span>
+            <span class="reg-badge">👥 10+ Employees</span>
+            <span class="reg-badge">⏱️ 3–5 Working Days</span>
+            <span class="reg-badge">🌐 Online (ESIC Portal)</span>
+          </div>
+        </div>
+        <div class="reg-hero-card">
+          <h3>At a Glance</h3>
+          <div class="quick-stat"><span class="label">Governing Act</span><span class="value">ESI Act, 1948</span></div>
+          <div class="quick-stat"><span class="label">Threshold</span><span class="value">10+ employees (varies)</span></div>
+          <div class="quick-stat"><span class="label">Employee Contribution</span><span class="value">0.75% of wages</span></div>
+          <div class="quick-stat"><span class="label">Employer Contribution</span><span class="value">3.25% of wages</span></div>
+          <div class="quick-stat"><span class="label">Wage Ceiling</span><span class="value">₹21,000/month</span></div>
+          <div class="quick-stat"><span class="label">Timeline</span><span class="value">3–5 working days</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-content">
+      <div class="reg-main">
+
+        <div class="info-block">
+          <h2>What is ESIC Registration?</h2>
+          <p>ESIC (Employees' State Insurance Corporation) registration gives employees access to comprehensive social security benefits — medical care, cash sickness benefits, maternity benefits, disability coverage, and dependent benefits in case of work-related death.</p>
+          <p>Upon registration, the employer receives a 17-digit ESIC code. Each employee gets an IP (Insured Person) number and a digital ESIC card for cashless treatment at empanelled hospitals.</p>
+        </div>
+
+        <div class="info-block">
+          <h2>Documents Required</h2>
+          <h3>A. Entity / Company Documents</h3>
+          <ul class="checklist">
+            <li>PAN Card of the Company / Firm / Proprietorship</li>
+            <li>Registration Proof — Certificate of Incorporation, Partnership Deed, GST Certificate, Shop &amp; Establishment License, or Factory License</li>
+            <li>Address Proof of Registered Office — Electricity Bill, Rent Agreement, or Property Tax Receipt</li>
+            <li>Cancelled Cheque of the current bank account (bearing company name)</li>
+            <li>Nature of Work (brief description)</li>
+            <li>Date of Commencement of Business</li>
+            <li>Date when employee count reached 10 (ESIC Coverage Date)</li>
+            <li>Last Month Salary Register (with Male / Female bifurcation)</li>
+          </ul>
+
+          <h3>B. Proprietor / Partner / Director Details</h3>
+          <ul class="checklist">
+            <li>PAN Card and Aadhaar Card of the Proprietor / all Partners / all Directors</li>
+            <li>Details of Owners on company letterhead (signed &amp; stamped)</li>
+            <li>Mobile Number &amp; Email ID for OTP registration</li>
+          </ul>
+
+          <h3>C. Manager / Contact Person Details</h3>
+          <ul class="checklist">
+            <li>Name &amp; Aadhaar Card of Contact / Manager Person</li>
+            <li>Mobile Number &amp; Email ID for portal login</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h2>Registration Process</h2>
+          <ol class="steps-list">
+            <li><div class="step-num">1</div><div class="step-text"><strong>Document Submission</strong><span>Share scanned documents with LEAP. All copies must be clear, legible PDFs.</span></div></li>
+            <li><div class="step-num">2</div><div class="step-text"><strong>Employer Registration on ESIC Portal</strong><span>LEAP registers the employer and creates an ESIC online account under the 17-digit employer code.</span></div></li>
+            <li><div class="step-num">3</div><div class="step-text"><strong>Employee (IP) Registration</strong><span>All eligible employees are registered as Insured Persons. ESIC insurance numbers are generated.</span></div></li>
+            <li><div class="step-num">4</div><div class="step-text"><strong>Pehchan Card Generation</strong><span>Digital ESIC photo cards are generated for each IP, enabling cashless treatment.</span></div></li>
+            <li><div class="step-num">5</div><div class="step-text"><strong>Handover &amp; Onboarding</strong><span>LEAP hands over login credentials and briefs you on half-yearly return filing and contribution deadlines.</span></div></li>
+          </ol>
+        </div>
+
+      </div>
+      <div class="reg-sidebar">
+        <div class="cta-card">
+          <h3>Start ESIC Registration</h3>
+          <p>Get your 17-digit employer code and employee IP numbers in 3–5 working days.</p>
+          <a href="tel:+917977213501" class="btn btn-white">📞 Call Now — Free Consult</a>
+          <a href="https://wa.me/917977213501?text=Hi%20LEAP%2C%20I%20need%20help%20with%20ESIC%20Registration" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Us</a>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>Benefits to Employees</h4>
+          <ul>
+            <li>Free medical care at ESI hospitals &amp; dispensaries</li>
+            <li>Sickness benefit (70% of wages for up to 91 days)</li>
+            <li>Maternity benefit up to 26 weeks</li>
+            <li>Disablement &amp; dependent benefits</li>
+          </ul>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>Key Deadlines</h4>
+          <ul>
+            <li>Monthly contributions due by <strong>15th of following month</strong></li>
+            <li>Half-yearly returns: <strong>May 11</strong> and <strong>November 11</strong></li>
+            <li>New employee registration within <strong>10 days</strong> of joining</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-esic -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       TAB: PROFESSIONAL TAX
+  ═════════════════════════════════════════════════════ -->
+  <div class="reg-panel" id="panel-pt">
+
+    <div class="reg-hero">
+      <div class="reg-hero-inner">
+        <div>
+          <span class="tag">State Act — Maharashtra &amp; Pan-India</span>
+          <h1>Professional Tax (PT) Registration</h1>
+          <p>Professional Tax is a state-level tax levied on salary-earning employees and self-employed professionals. Employers must enrol under PTEC (Employer) and register their employees under PTRC (Employee deduction). LEAP covers PT registrations across all applicable states.</p>
+          <div class="reg-hero-badges">
+            <span class="reg-badge">🏛️ State Registration</span>
+            <span class="reg-badge">👥 All Employees</span>
+            <span class="reg-badge">⏱️ 5–7 Working Days</span>
+            <span class="reg-badge">🌐 Online / Offline</span>
+          </div>
+        </div>
+        <div class="reg-hero-card">
+          <h3>At a Glance (Maharashtra)</h3>
+          <div class="quick-stat"><span class="label">PTEC (Employer)</span><span class="value">₹2,500/year</span></div>
+          <div class="quick-stat"><span class="label">PTRC (Employee)</span><span class="value">Slab-based (max ₹2,500)</span></div>
+          <div class="quick-stat"><span class="label">Payment Frequency</span><span class="value">Monthly / Annual</span></div>
+          <div class="quick-stat"><span class="label">Return Frequency</span><span class="value">Annual (or monthly if &gt;₹50K/year)</span></div>
+          <div class="quick-stat"><span class="label">Timeline</span><span class="value">5–7 working days</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-content">
+      <div class="reg-main">
+
+        <div class="info-block">
+          <h2>What is Professional Tax Registration?</h2>
+          <p>Professional Tax (PT) is a state-imposed tax on employment income. Employers must (a) enrol themselves as PTEC holders and pay ₹2,500 annually, and (b) register as PTRC deductors, deduct PT from employee salaries as per state slabs, and remit it to the state government.</p>
+          <p>States with PT: Maharashtra, Karnataka, West Bengal, Andhra Pradesh, Telangana, Tamil Nadu, Gujarat, Madhya Pradesh, Assam, Kerala, Meghalaya, Tripura, Sikkim, Bihar, Jharkhand, and Odisha.</p>
+        </div>
+
+        <div class="info-block">
+          <h2>Documents Required — Maharashtra PTEC Registration</h2>
+          <h3>Employer / Company Information</h3>
+          <ul class="checklist">
+            <li>Available Mobile Number for OTP verification</li>
+            <li>Available Email ID for verification link</li>
+            <li>PAN Number of the establishment</li>
+            <li>Establishment Name (as per PAN Card)</li>
+            <li>Establishment Address with PIN code</li>
+            <li>Constitution of business — Private / Public / Government / Other</li>
+            <li>Nature of Business</li>
+            <li>Date of Commencement of Activity</li>
+            <li>Month of Commencement of Profession / Trade / Calling / Employment</li>
+          </ul>
+          <h3>Director / Signatory Details</h3>
+          <ul class="checklist">
+            <li>Name of Signatory to the application</li>
+            <li>Designation of the Signatory</li>
+          </ul>
+          <h3>Bank Details</h3>
+          <ul class="checklist">
+            <li>Bank Account Number</li>
+            <li>Bank Name, IFSC Code, Branch Address</li>
+          </ul>
+          <h3>Supporting Documents</h3>
+          <ul class="checklist">
+            <li>Cancelled Cheque (company / firm account)</li>
+            <li>Employer PAN Card and Aadhaar Card</li>
+            <li>Electricity Bill of registered office</li>
+            <li>Employer Photograph and Signature</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h2>Maharashtra PT Slabs (PTRC — Employee)</h2>
+          <table class="applic-table">
+            <thead>
+              <tr><th>Monthly Salary (₹)</th><th>PT per Month (₹)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Up to ₹7,500</td><td>Nil</td></tr>
+              <tr><td>₹7,501 – ₹10,000</td><td>₹175</td></tr>
+              <tr><td>₹10,001 and above</td><td>₹200 (₹300 in February)</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:13px;color:var(--text-secondary);">* Slabs vary by state. LEAP provides state-wise PT slab details on request.</p>
+        </div>
+
+        <div class="info-block">
+          <h2>Registration Process</h2>
+          <ol class="steps-list">
+            <li><div class="step-num">1</div><div class="step-text"><strong>Determine Applicability</strong><span>LEAP confirms which states require PT registration based on your office locations.</span></div></li>
+            <li><div class="step-num">2</div><div class="step-text"><strong>Document Collection</strong><span>You share PAN, address proof, Aadhaar, and other documents listed above.</span></div></li>
+            <li><div class="step-num">3</div><div class="step-text"><strong>PTEC &amp; PTRC Filing</strong><span>LEAP files both employer enrolment (PTEC) and employee registration (PTRC) on the state GST/Sales Tax portal.</span></div></li>
+            <li><div class="step-num">4</div><div class="step-text"><strong>Certificate Issued</strong><span>State authority issues the PT Registration Certificate (RC) and Enrolment Certificate (EC).</span></div></li>
+            <li><div class="step-num">5</div><div class="step-text"><strong>Payroll Integration</strong><span>LEAP assists with integrating PT deduction into your payroll cycle and setting up return schedules.</span></div></li>
+          </ol>
+        </div>
+
+      </div>
+      <div class="reg-sidebar">
+        <div class="cta-card">
+          <h3>Start PT Registration</h3>
+          <p>Multi-state PT registration with payroll integration support included.</p>
+          <a href="tel:+917977213501" class="btn btn-white">📞 Call Now — Free Consult</a>
+          <a href="https://wa.me/917977213501?text=Hi%20LEAP%2C%20I%20need%20help%20with%20PT%20Registration" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Us</a>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>States with PT</h4>
+          <ul>
+            <li>Maharashtra, Karnataka, West Bengal</li>
+            <li>Andhra Pradesh, Telangana, Tamil Nadu</li>
+            <li>Gujarat, Madhya Pradesh, Assam</li>
+            <li>Kerala, Meghalaya, Sikkim, Bihar</li>
+            <li>Jharkhand, Odisha, Tripura</li>
+          </ul>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>PTEC vs PTRC</h4>
+          <ul>
+            <li><strong>PTEC</strong> — Employer enrolment; flat ₹2,500/year</li>
+            <li><strong>PTRC</strong> — Employee deduction &amp; deposit; slab-based</li>
+            <li>Both required if you have employees</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-pt -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       TAB: CLRA
+  ═════════════════════════════════════════════════════ -->
+  <div class="reg-panel" id="panel-clra">
+
+    <div class="reg-hero">
+      <div class="reg-hero-inner">
+        <div>
+          <span class="tag">Central Act — State Rules</span>
+          <h1>Contract Labour (CLRA) Registration</h1>
+          <p>Under the Contract Labour (Regulation &amp; Abolition) Act, 1970, every Principal Employer engaging contract labour must obtain a Registration Certificate. Thresholds and procedures vary by state — LEAP manages multi-state CLRA registrations comprehensively.</p>
+          <div class="reg-hero-badges">
+            <span class="reg-badge">🏛️ Principal Employer Registration</span>
+            <span class="reg-badge">👥 Threshold Varies (5–50+)</span>
+            <span class="reg-badge">⏱️ 7–15 Working Days</span>
+            <span class="reg-badge">🌐 Online / Offline</span>
+          </div>
+        </div>
+        <div class="reg-hero-card">
+          <h3>Maharashtra — At a Glance</h3>
+          <div class="quick-stat"><span class="label">Threshold</span><span class="value">20+ contract workers</span></div>
+          <div class="quick-stat"><span class="label">Form</span><span class="value">Form I + Form I-A (Declaration)</span></div>
+          <div class="quick-stat"><span class="label">Amendment</span><span class="value">Within 30 days of change</span></div>
+          <div class="quick-stat"><span class="label">Mode</span><span class="value">Online</span></div>
+          <div class="quick-stat"><span class="label">Rules</span><span class="value">Maharashtra CLRA Rules, 1971</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-content">
+      <div class="reg-main">
+
+        <div class="info-block">
+          <h2>Who Needs CLRA Registration?</h2>
+          <p>Any establishment that engages workers through a contractor (contract labour) above the prescribed threshold must register as a <strong>Principal Employer</strong>. Separately, contractors employing contract workers must obtain a <strong>Licence</strong> from the licensing authority.</p>
+          <p>The minimum employee threshold for CLRA registration varies by state — from as low as 5 workers (Telangana) to 50 workers (Andhra Pradesh).</p>
+        </div>
+
+        <div class="info-block">
+          <h2>Documents Required</h2>
+          <ul class="checklist">
+            <li>PAN Card of the establishment (Principal Employer)</li>
+            <li>Certificate of Incorporation / Partnership Deed / GST Certificate</li>
+            <li>Address Proof of establishment (Electricity Bill / Rent Agreement)</li>
+            <li>Nature of work performed by contract labour (brief description)</li>
+            <li>Number of contract workers deployed (current)</li>
+            <li>Name &amp; designation of the person responsible for compliance (Principal Employer representative)</li>
+            <li>Aadhaar Card of the authorised signatory</li>
+            <li>List of contractors engaged (name, address, nature of work)</li>
+            <li>Declaration in Form I-A (Maharashtra) / as applicable by state</li>
+            <li>Cancelled cheque (for fee payment, where applicable)</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h2>State-wise CLRA Applicability Snapshot</h2>
+          <table class="applic-table">
+            <thead>
+              <tr><th>State</th><th>Min. Threshold</th><th>Mode</th><th>Key Rule</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Maharashtra</td><td>20+</td><td>Online</td><td>Maharashtra CLRA Rules, 1971</td></tr>
+              <tr><td>Karnataka</td><td>20+</td><td>Online</td><td>Karnataka CLRA Rules, 1974</td></tr>
+              <tr><td>Telangana</td><td>5+</td><td>Online</td><td>Telangana CLRA Rules, 1971</td></tr>
+              <tr><td>Andhra Pradesh</td><td>50+</td><td>Online</td><td>AP CLRA Rules, 1971</td></tr>
+              <tr><td>Gujarat</td><td>20+</td><td>Online</td><td>Gujarat CLRA Rules, 1972</td></tr>
+              <tr><td>Tamil Nadu</td><td>20+</td><td>Online</td><td>TN CLRA Rules, 1975</td></tr>
+              <tr><td>Delhi / Central</td><td>20+</td><td>Online</td><td>Central CLRA Rules, 1971</td></tr>
+              <tr><td>West Bengal</td><td>20+</td><td>Offline</td><td>WB CLRA Rules, 1972</td></tr>
+              <tr><td>Rajasthan</td><td>20+</td><td>Online</td><td>Rajasthan CLRA Rules, 1971</td></tr>
+              <tr><td>Assam</td><td>10+</td><td>Offline</td><td>Assam CLRA Rules, 1971</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:13px;color:var(--text-secondary);">LEAP maintains a complete PAN-India CLRA applicability matrix. <a href="contact.html" style="color:var(--secondary);">Request the full state-wise list →</a></p>
+        </div>
+
+        <div class="info-block">
+          <h2>Registration Process</h2>
+          <ol class="steps-list">
+            <li><div class="step-num">1</div><div class="step-text"><strong>Applicability Assessment</strong><span>LEAP maps all your locations and identifies which states need CLRA registration based on contractor headcount.</span></div></li>
+            <li><div class="step-num">2</div><div class="step-text"><strong>Document Preparation</strong><span>LEAP prepares Form I and any state-specific declarations (e.g., Form I-A for Maharashtra).</span></div></li>
+            <li><div class="step-num">3</div><div class="step-text"><strong>Filing with Labour Department</strong><span>Application filed online or offline (as required by the state) along with prescribed fees.</span></div></li>
+            <li><div class="step-num">4</div><div class="step-text"><strong>Registration Certificate (RC) Issued</strong><span>Once approved, a Registration Certificate is issued to the Principal Employer.</span></div></li>
+            <li><div class="step-num">5</div><div class="step-text"><strong>Ongoing Compliance</strong><span>LEAP tracks amendment requirements (changes to contractor count, nature of work) and renewal obligations.</span></div></li>
+          </ol>
+        </div>
+
+      </div>
+      <div class="reg-sidebar">
+        <div class="cta-card">
+          <h3>Start CLRA Registration</h3>
+          <p>Multi-state contractor compliance — we handle all states simultaneously.</p>
+          <a href="tel:+917977213501" class="btn btn-white">📞 Call Now — Free Consult</a>
+          <a href="https://wa.me/917977213501?text=Hi%20LEAP%2C%20I%20need%20help%20with%20CLRA%20Registration" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Us</a>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>Key Obligations Post-Registration</h4>
+          <ul>
+            <li>Maintain Form XII register of contract workers</li>
+            <li>Ensure contractor maintains Form XIII licence</li>
+            <li>Half-yearly returns in many states</li>
+            <li>Amend RC within 30 days of any material change</li>
+          </ul>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>Principal Employer vs. Contractor</h4>
+          <ul>
+            <li><strong>Principal Employer</strong> — Obtains Registration Certificate (Form II)</li>
+            <li><strong>Contractor</strong> — Obtains Licence (Form V); max workers fixed per licence</li>
+            <li>Both registrations managed by LEAP</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-clra -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       TAB: LWF
+  ═════════════════════════════════════════════════════ -->
+  <div class="reg-panel" id="panel-lwf">
+
+    <div class="reg-hero">
+      <div class="reg-hero-inner">
+        <div>
+          <span class="tag">State Act</span>
+          <h1>Labour Welfare Fund (LWF) Registration</h1>
+          <p>The Labour Welfare Fund is a state-level statutory contribution that provides welfare benefits — housing, education, medical aid — to workers. Each state has its own LWF Act with different contribution rates and payment frequencies. LEAP manages LWF compliance across all applicable states.</p>
+          <div class="reg-hero-badges">
+            <span class="reg-badge">🏛️ State Registration</span>
+            <span class="reg-badge">👥 5+ Employees (MH)</span>
+            <span class="reg-badge">📅 Half-Yearly Contributions</span>
+            <span class="reg-badge">🌐 Online</span>
+          </div>
+        </div>
+        <div class="reg-hero-card">
+          <h3>Maharashtra — At a Glance</h3>
+          <div class="quick-stat"><span class="label">Act</span><span class="value">MLWF Act, 1953</span></div>
+          <div class="quick-stat"><span class="label">Threshold</span><span class="value">5+ employees</span></div>
+          <div class="quick-stat"><span class="label">Employee Contribution</span><span class="value">₹25 per period</span></div>
+          <div class="quick-stat"><span class="label">Employer Contribution</span><span class="value">₹75 per period</span></div>
+          <div class="quick-stat"><span class="label">Total per Employee</span><span class="value">₹100 per period</span></div>
+          <div class="quick-stat"><span class="label">Deduction Dates</span><span class="value">30 June &amp; 31 December</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-content">
+      <div class="reg-main">
+
+        <div class="info-block">
+          <h2>What is Labour Welfare Fund?</h2>
+          <p>The Maharashtra Labour Welfare Fund Act, 1953 (and equivalent state acts) require employers to make periodic contributions to the state Labour Welfare Board. These funds are used to provide welfare amenities to workers — canteens, hostels, libraries, recreational facilities, scholarships, and health schemes.</p>
+          <p>LWF applies to all employees <em>except those in managerial or supervisory capacity</em>. The deduction is made from the employee's salary and a higher amount contributed by the employer.</p>
+        </div>
+
+        <div class="info-block">
+          <h2>Contribution Details — Maharashtra</h2>
+          <table class="applic-table">
+            <thead>
+              <tr><th>Who</th><th>Contribution per Period</th><th>Annual Total</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Employee</td><td>₹25</td><td>₹50</td></tr>
+              <tr><td>Employer</td><td>₹75</td><td>₹150</td></tr>
+              <tr><td><strong>Total per Employee</strong></td><td><strong>₹100</strong></td><td><strong>₹200</strong></td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:13px;color:var(--text-secondary);">Deduction dates: 30 June and 31 December. Returns due: 15 July and 15 January.</p>
+        </div>
+
+        <div class="info-block">
+          <h2>Documents Required — Maharashtra LWF Registration</h2>
+          <ul class="checklist">
+            <li>Primary Mobile Number and Email ID for online registration</li>
+            <li>Company PAN Card</li>
+            <li>List of Directors on company letterhead (with company stamp and authorised signature)</li>
+            <li>Employer's PAN Card and Aadhaar Card (self-attested)</li>
+            <li>Cancelled blank cheque of the current account</li>
+            <li>GST Registration Certificate / Certificate of Incorporation / UDYOG AADHAAR</li>
+            <li>Employee details — Aadhaar Number, Mobile Number, Designation, and Gender</li>
+            <li>Proof of premises — Electricity Bill (with company stamp and authorised signature)</li>
+            <li>Salary Register</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h2>Annual Compliance Calendar</h2>
+          <table class="applic-table">
+            <thead>
+              <tr><th>Activity</th><th>Date</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Half-yearly deduction (June period)</td><td>30 June</td></tr>
+              <tr><td>LWF Return &amp; remittance (June period)</td><td>15 July</td></tr>
+              <tr><td>Half-yearly deduction (December period)</td><td>31 December</td></tr>
+              <tr><td>LWF Return &amp; remittance (December period)</td><td>15 January</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <div class="reg-sidebar">
+        <div class="cta-card">
+          <h3>Start LWF Registration</h3>
+          <p>Multi-state LWF registration and half-yearly filing handled by LEAP.</p>
+          <a href="tel:+917977213501" class="btn btn-white">📞 Call Now — Free Consult</a>
+          <a href="https://wa.me/917977213501?text=Hi%20LEAP%2C%20I%20need%20help%20with%20LWF%20Registration" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Us</a>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>States with LWF</h4>
+          <ul>
+            <li>Maharashtra, Andhra Pradesh, Karnataka</li>
+            <li>Gujarat, Haryana, Kerala</li>
+            <li>Madhya Pradesh, Odisha, Punjab</li>
+            <li>Tamil Nadu, West Bengal, Delhi</li>
+            <li>Telangana, Goa, and others</li>
+          </ul>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>Exemptions</h4>
+          <ul>
+            <li>Managerial and supervisory staff exempt from deduction in most states</li>
+            <li>States may exempt certain industries or establishment types</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-lwf -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       TAB: BOCW
+  ═════════════════════════════════════════════════════ -->
+  <div class="reg-panel" id="panel-bocw">
+
+    <div class="reg-hero">
+      <div class="reg-hero-inner">
+        <div>
+          <span class="tag">Central Act — State Administration</span>
+          <h1>BOCW Registration (Building &amp; Construction Workers)</h1>
+          <p>Under the Building and Other Construction Workers (Regulation of Employment &amp; Conditions of Service) Act, 1996, every establishment undertaking construction work must register. LEAP assists with employer registration under BOCW and the associated Welfare Cess compliance.</p>
+          <div class="reg-hero-badges">
+            <span class="reg-badge">🏗️ Construction Establishments</span>
+            <span class="reg-badge">👥 10+ Workers</span>
+            <span class="reg-badge">💰 1% Cess on Project Cost</span>
+            <span class="reg-badge">🌐 State Labour Department</span>
+          </div>
+        </div>
+        <div class="reg-hero-card">
+          <h3>At a Glance</h3>
+          <div class="quick-stat"><span class="label">Governing Act</span><span class="value">BOCW Act, 1996</span></div>
+          <div class="quick-stat"><span class="label">Threshold</span><span class="value">10+ building workers</span></div>
+          <div class="quick-stat"><span class="label">Cess Rate</span><span class="value">1% of cost of construction</span></div>
+          <div class="quick-stat"><span class="label">Cess Due</span><span class="value">Within 30 days of billing</span></div>
+          <div class="quick-stat"><span class="label">Worker Registration</span><span class="value">Via State Welfare Board</span></div>
+          <div class="quick-stat"><span class="label">Renewal</span><span class="value">Annual</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-content">
+      <div class="reg-main">
+
+        <div class="info-block">
+          <h2>Who Needs BOCW Registration?</h2>
+          <p>Any establishment that carries out building or construction work — including roads, bridges, canals, buildings, transmission lines, and renovation — and employs 10 or more construction workers must register under the BOCW Act. This covers both principal employers and contractors engaged in construction activities.</p>
+          <p>In addition to employer registration, employers must pay a <strong>BOCW Welfare Cess</strong> at 1% of the cost of construction to the State Building &amp; Other Construction Workers Welfare Board.</p>
+        </div>
+
+        <div class="info-block">
+          <h2>Documents Required</h2>
+          <ul class="checklist">
+            <li>PAN Card of the establishment / principal employer</li>
+            <li>Certificate of Incorporation / Partnership Deed / GST Certificate</li>
+            <li>Address Proof — Electricity Bill, Rent Agreement, or Property Tax Receipt</li>
+            <li>Details of construction project — location, nature of work, estimated cost, start and end dates</li>
+            <li>List of workers employed at the construction site (name, Aadhaar, designation)</li>
+            <li>Aadhaar Card of the authorised signatory</li>
+            <li>PAN Card and Aadhaar of all Partners / Directors</li>
+            <li>Bank details — account number, IFSC, branch address</li>
+            <li>Cancelled Cheque (company account)</li>
+            <li>Site photographs (some state boards require)</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h2>BOCW Cess Compliance</h2>
+          <table class="applic-table">
+            <thead>
+              <tr><th>Cess Item</th><th>Detail</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Cess Rate</td><td>1% of cost of construction (excluding labour cost)</td></tr>
+              <tr><td>Due Date</td><td>Within 30 days of bill raised / payment received</td></tr>
+              <tr><td>Form</td><td>BOCW Cess Return (state-specific)</td></tr>
+              <tr><td>Penalty for non-payment</td><td>Interest + penalties under BOCW Cess Act, 1996</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-block">
+          <h2>Registration Process</h2>
+          <ol class="steps-list">
+            <li><div class="step-num">1</div><div class="step-text"><strong>Applicability Check</strong><span>LEAP confirms whether your establishment meets the BOCW threshold at each project location.</span></div></li>
+            <li><div class="step-num">2</div><div class="step-text"><strong>Document Collection &amp; Preparation</strong><span>Project details, worker list, and establishment documents are compiled.</span></div></li>
+            <li><div class="step-num">3</div><div class="step-text"><strong>Registration with State Welfare Board</strong><span>LEAP files the registration application with the relevant State BOCW Welfare Board.</span></div></li>
+            <li><div class="step-num">4</div><div class="step-text"><strong>Worker Registration</strong><span>Eligible construction workers are registered with the Welfare Board to avail benefits.</span></div></li>
+            <li><div class="step-num">5</div><div class="step-text"><strong>Cess Filing Setup</strong><span>LEAP sets up a calendar for cess payments tied to project billing milestones and handles ongoing returns.</span></div></li>
+          </ol>
+        </div>
+
+      </div>
+      <div class="reg-sidebar">
+        <div class="cta-card">
+          <h3>Start BOCW Registration</h3>
+          <p>Construction project compliance — registration and cess filing managed end-to-end.</p>
+          <a href="tel:+917977213501" class="btn btn-white">📞 Call Now — Free Consult</a>
+          <a href="https://wa.me/917977213501?text=Hi%20LEAP%2C%20I%20need%20help%20with%20BOCW%20Registration" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Us</a>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>Worker Benefits Under BOCW</h4>
+          <ul>
+            <li>Medical assistance &amp; health insurance</li>
+            <li>Educational scholarships for workers' children</li>
+            <li>Pension &amp; disability benefits</li>
+            <li>Maternity benefit for women workers</li>
+            <li>Death &amp; accident insurance</li>
+          </ul>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>Penalty for Non-Compliance</h4>
+          <ul>
+            <li>Failure to register: imprisonment up to 3 months or fine up to ₹1,000</li>
+            <li>Cess default: interest + penalties under BOCW Cess Act</li>
+            <li>Inspector powers to survey construction sites</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-bocw -->
+
+
+  <!-- ════════════════════════════════════════════════════
+       TAB: SHOP & ESTABLISHMENT
+  ═════════════════════════════════════════════════════ -->
+  <div class="reg-panel" id="panel-se">
+
+    <div class="reg-hero">
+      <div class="reg-hero-inner">
+        <div>
+          <span class="tag">State Act</span>
+          <h1>Shop &amp; Establishment Registration</h1>
+          <p>Every commercial establishment — shops, offices, hotels, restaurants, theatres — must register under the respective state's Shops &amp; Establishment Act within 30 days of commencement. LEAP handles S&amp;E registration across Maharashtra and all major states.</p>
+          <div class="reg-hero-badges">
+            <span class="reg-badge">🏪 All Commercial Establishments</span>
+            <span class="reg-badge">👥 Any Number of Employees</span>
+            <span class="reg-badge">⏱️ 7–10 Working Days</span>
+            <span class="reg-badge">🌐 Online (Maharashtra)</span>
+          </div>
+        </div>
+        <div class="reg-hero-card">
+          <h3>Maharashtra — At a Glance</h3>
+          <div class="quick-stat"><span class="label">Act</span><span class="value">Maharashtra S&amp;E Act, 2017</span></div>
+          <div class="quick-stat"><span class="label">Applies to</span><span class="value">All commercial establishments</span></div>
+          <div class="quick-stat"><span class="label">Registration Form</span><span class="value">Form A (online)</span></div>
+          <div class="quick-stat"><span class="label">Validity</span><span class="value">Permanent (update on changes)</span></div>
+          <div class="quick-stat"><span class="label">Fee</span><span class="value">Employee-slab based</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-content">
+      <div class="reg-main">
+
+        <div class="info-block">
+          <h2>What is Shop &amp; Establishment Registration?</h2>
+          <p>The Shops &amp; Establishments Act governs working conditions in all commercial establishments — including shops, offices, warehouses, factories with fewer than 10 workers, hotels, restaurants, and entertainment venues. Registration gives the establishment its "Gumasta" or trade license equivalent, and is often required for opening a bank account or obtaining other business licenses.</p>
+          <p>Under Maharashtra's reformed S&amp;E Act (2017), registration is done online and the certificate is permanent — no annual renewal, but amendments must be filed on any change in key details.</p>
+        </div>
+
+        <div class="info-block">
+          <h2>Documents Required — Maharashtra</h2>
+          <h3>Establishment Details</h3>
+          <ul class="checklist">
+            <li>Name of the Establishment (exact legal name)</li>
+            <li>Postal address and location — Ward Number included</li>
+            <li>Date of Commencement of business</li>
+            <li>Nature of Business</li>
+            <li>Whether establishment is Public / Private</li>
+            <li>Type of Employer — Proprietorship / Partnership / LLP / Pvt Ltd / Public Ltd / Trust / Co-operative Society</li>
+            <li>Category of Establishment — Shop (I) / Commercial Establishment (II) / Restaurant &amp; Eating House (IV) / Residential Hotel / Theatre &amp; Public Amusement (V)</li>
+            <li>Building UID Number</li>
+            <li>Slum or Non-Slum declaration</li>
+          </ul>
+
+          <h3>Employer / Director Details</h3>
+          <ul class="checklist">
+            <li>Name and Address of Employer / Director (all directors for companies)</li>
+            <li>Aadhaar Card of each Employer / Director</li>
+            <li>Mobile Number and Email ID of Employer</li>
+          </ul>
+
+          <h3>Employee Details</h3>
+          <ul class="checklist">
+            <li>Total number of employees (Men / Women separately)</li>
+            <li>Number of persons in managerial / supervisory / confidential capacity</li>
+            <li>Number of apprentices and contract labourers (if any)</li>
+            <li>Part-time worker count</li>
+          </ul>
+
+          <h3>Authorised / Manager Details (if applicable)</h3>
+          <ul class="checklist">
+            <li>Name, Address, Mobile and Email of Authorised Person</li>
+            <li>Name, Address, Mobile and Email of Manager</li>
+            <li>POSH (Prevention of Sexual Harassment) committee constitution details</li>
+          </ul>
+
+          <h3>Premises Details</h3>
+          <ul class="checklist">
+            <li>Owned or rented premises declaration</li>
+            <li>Whether business is in flat / apartment / residential housing society</li>
+          </ul>
+
+          <h3>Supporting Documents</h3>
+          <ul class="checklist">
+            <li>Employer / Director — Photo, Signature, Aadhaar Card, Board Resolution or Power of Attorney</li>
+            <li>Company Documents — Certificate of Incorporation, MOA/AOA, PAN Card, List of Directors with residential addresses</li>
+            <li>POSH committee details on company letterhead</li>
+            <li>Branch Documents — Name Board photo, Interior &amp; Exterior photos, Notarised Lease Deed, Current month Electricity Bill, Property Tax Receipt</li>
+            <li><em>Note: All documents must be self-attested to avoid rejection of RC copies</em></li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h2>Registration Process</h2>
+          <ol class="steps-list">
+            <li><div class="step-num">1</div><div class="step-text"><strong>Document Collection</strong><span>LEAP shares a detailed checklist; you submit self-attested scanned documents.</span></div></li>
+            <li><div class="step-num">2</div><div class="step-text"><strong>Online Application on Maharashtra Portal</strong><span>LEAP files the S&amp;E registration application (Form A) on the Maharashtra Labour Department portal.</span></div></li>
+            <li><div class="step-num">3</div><div class="step-text"><strong>OTP &amp; Digital Verification</strong><span>Director/proprietor verifies via OTP; digital signature (if required) attached.</span></div></li>
+            <li><div class="step-num">4</div><div class="step-text"><strong>Inspector Review</strong><span>In some categories (10+ employees), a Labour Inspector may visit the premises for inspection before approval.</span></div></li>
+            <li><div class="step-num">5</div><div class="step-text"><strong>Registration Certificate Issued</strong><span>Online RC certificate issued. LEAP hands over the certificate and advises on display requirements.</span></div></li>
+          </ol>
+        </div>
+
+      </div>
+      <div class="reg-sidebar">
+        <div class="cta-card">
+          <h3>Start S&amp;E Registration</h3>
+          <p>Get your Gumasta / Shop Act licence within 7–10 working days. Required for every commercial premises.</p>
+          <a href="tel:+917977213501" class="btn btn-white">📞 Call Now — Free Consult</a>
+          <a href="https://wa.me/917977213501?text=Hi%20LEAP%2C%20I%20need%20help%20with%20Shop%20and%20Establishment%20Registration" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Us</a>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>Why is S&amp;E Registration Important?</h4>
+          <ul>
+            <li>Mandatory for current accounts in most banks</li>
+            <li>Required for obtaining GST, IEC, and other licenses</li>
+            <li>Establishes employee working hour and leave rights</li>
+            <li>Penalty: ₹5,000+ fine for operating without registration</li>
+          </ul>
+        </div>
+        <div class="info-sidebar-card">
+          <h4>When to Amend the Certificate</h4>
+          <ul>
+            <li>Change of address or premises</li>
+            <li>Change in establishment name</li>
+            <li>Significant change in employee strength</li>
+            <li>Change in ownership / directors</li>
+            <li>Closure of establishment (file Form C)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-se -->
+
+
+  <!-- Footer (injected by JS) -->
+  <div id="footer-placeholder"></div>
+  <div id="whatsapp-placeholder"></div>
+
+  <!-- Site JS -->
+  <script src="js/components.js"></script>
+  <script>
+    // Render shared components
+    renderNavbar('registrations');
+    renderFooter();
+    renderWhatsApp();
+
+    // ── Tab switching ──────────────────────────────────
+    const tabBtns  = document.querySelectorAll('.reg-tab-btn');
+    const panels   = document.querySelectorAll('.reg-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+
+        // Update buttons
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update panels
+        panels.forEach(p => p.classList.remove('active'));
+        document.getElementById('panel-' + target).classList.add('active');
+
+        // Scroll to top of tab content
+        document.querySelector('.reg-tabs-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // ── URL hash navigation ────────────────────────────
+    // e.g. registrations.html#pf opens PF tab directly
+    (function() {
+      const hash = window.location.hash.replace('#', '');
+      const validTabs = ['pf','esic','pt','clra','lwf','bocw','se'];
+      if (validTabs.includes(hash)) {
+        document.querySelector('[data-tab="' + hash + '"]').click();
+      }
+    })();
+  </script>
+
+</body>
+</html>

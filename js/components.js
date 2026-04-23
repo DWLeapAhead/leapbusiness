@@ -30,6 +30,7 @@ function renderNavbar(activePage) {
           <li><a href="blog.html"             ${activePage==='blog'    ?'class="active"':''}>Resources</a></li>
           <li><a href="faq.html"              ${activePage==='faq'     ?'class="active"':''}>FAQs</a></li>
           <li><a href="contact.html"          ${activePage==='contact' ?'class="active"':''}>Contact</a></li>
+          <li><a href="registrations.html" ${activePage==='registrations'?'class="active"':''}>Registrations</a></li>
         </ul>
 
         <a href="tel:+917977213501" class="btn btn-primary nav-cta">📞 Free Audit Call</a>
@@ -45,6 +46,7 @@ function renderNavbar(activePage) {
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="services.html">Services</a>
+      <a href="registrations.html">Registrations</a>
       <a href="payroll-compliance.html">Payroll Compliance</a>
       <a href="blog.html">Resources / Blog</a>
       <a href="faq.html">FAQs</a>

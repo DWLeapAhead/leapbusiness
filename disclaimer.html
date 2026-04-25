@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disclaimer – LEAP Business Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #1a1a2e;
+      --ink-soft:  #3d3d5c;
+      --accent:    #7c5200;
+      --accent-bg: #c8860a;
+      --accent-lt: #fdf8ef;
+      --gold:      #e8a838;
+      --rule:      #e0ddd8;
+      --bg:        #faf9f7;
+      --card:      #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    header {
+      background: var(--ink);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(0,0,0,.35);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-badge {
+      width: 42px; height: 42px;
+      background: var(--accent-bg);
+      border-radius: 8px;
+      display: grid; place-items: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700;
+      color: #fff; letter-spacing: -1px;
+    }
+    .logo-text { color: #fff; }
+    .logo-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; letter-spacing: .5px; }
+    .logo-text span { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; opacity: .6; }
+    .header-tag {
+      font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+      background: var(--accent-bg); color: #fff;
+      padding: 5px 14px; border-radius: 4px;
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, #2e1f00 0%, #4e3400 60%, #2e1f00 100%);
+      color: #fff;
+      padding: 64px 40px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 60px,
+        rgba(255,255,255,.015) 60px,
+        rgba(255,255,255,.015) 61px
+      );
+    }
+    .page-hero .eyebrow {
+      font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 16px;
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700; line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .page-hero .meta { font-size: 14px; opacity: .65; letter-spacing: .5px; }
+    .page-hero .meta span { color: var(--gold); }
+
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 40px 80px;
+    }
+
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent-bg);
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-bottom: 52px;
+    }
+    .toc h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--ink-soft); margin-bottom: 16px;
+    }
+    .toc ol { list-style: none; counter-reset: toc; }
+    .toc ol li { counter-increment: toc; margin-bottom: 8px; }
+    .toc ol li::before {
+      content: counter(toc, decimal-leading-zero) ". ";
+      color: var(--accent-bg); font-weight: 600; font-size: 14px;
+    }
+    .toc a {
+      color: var(--ink); text-decoration: none;
+      font-size: 15px; font-weight: 400;
+      border-bottom: 1px dotted var(--rule);
+      transition: color .2s;
+    }
+    .toc a:hover { color: var(--accent-bg); }
+
+    .doc-section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .doc-section:last-child { border-bottom: none; }
+
+    .section-num {
+      font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--accent-bg); font-weight: 600; margin-bottom: 8px;
+    }
+
+    h2.section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 700;
+      color: var(--ink); margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    p { margin-bottom: 16px; color: var(--ink-soft); }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { margin: 16px 0 16px 24px; color: var(--ink-soft); }
+    li { margin-bottom: 8px; }
+
+    .highlight-box {
+      background: var(--accent-lt);
+      border-left: 3px solid var(--accent-bg);
+      border-radius: 0 6px 6px 0;
+      padding: 18px 24px;
+      margin: 24px 0;
+      font-size: 15px;
+    }
+    .highlight-box strong { color: var(--accent); }
+
+    .caution-box {
+      background: #fff8e1;
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+      padding: 22px 28px;
+      margin: 24px 0;
+      font-size: 15px;
+      position: relative;
+    }
+    .caution-box::before {
+      content: '⚠';
+      position: absolute;
+      top: -14px; left: 20px;
+      background: var(--gold);
+      color: #fff;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      line-height: 28px;
+      text-align: center;
+    }
+    .caution-box strong { color: var(--accent); }
+
+    strong { color: var(--ink); font-weight: 600; }
+
+    .contact-card {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 12px;
+      padding: 36px 40px;
+      margin-top: 52px;
+    }
+    .contact-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; margin-bottom: 12px;
+    }
+    .contact-card p { color: rgba(255,255,255,.7); margin-bottom: 8px; }
+    .contact-card a { color: var(--gold); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.45);
+      text-align: center;
+      font-size: 13px;
+      padding: 24px 40px;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 14px 20px; }
+      .page-hero { padding: 44px 20px 36px; }
+      .page-wrap { padding: 36px 20px 60px; }
+      .toc { padding: 20px; }
+      .contact-card { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo-wrap" href="https://www.leapbusiness.in/">
+      <div class="logo-badge">LB</div>
+      <div class="logo-text">
+        <strong>LEAP Business Solutions</strong>
+        <span>Labour Law Compliance Consultants</span>
+      </div>
+    </a>
+    <span class="header-tag">Disclaimer</span>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="eyebrow">Legal Documentation</div>
+  <h1>Disclaimer</h1>
+  <p class="meta">Effective Date: <span>April 25, 2025</span> &nbsp;·&nbsp; Last Revised: <span>April 25, 2025</span></p>
+</section>
+
+<div class="page-wrap">
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s1">General Information Disclaimer</a></li>
+      <li><a href="#s2">No Legal or Professional Advice</a></li>
+      <li><a href="#s3">Accuracy of Information</a></li>
+      <li><a href="#s4">Regulatory &amp; Statutory Updates</a></li>
+      <li><a href="#s5">Free Audit Disclaimer</a></li>
+      <li><a href="#s6">No Guarantee of Outcomes</a></li>
+      <li><a href="#s7">Third-Party Content &amp; Links</a></li>
+      <li><a href="#s8">Testimonials &amp; Results</a></li>
+      <li><a href="#s9">Website Availability</a></li>
+      <li><a href="#s10">Limitation of Liability</a></li>
+      <li><a href="#s11">Contact &amp; Clarifications</a></li>
+    </ol>
+  </div>
+
+  <div class="caution-box">
+    <strong>Important Notice:</strong> Please read this Disclaimer carefully before using the website or relying on any information published by LEAP Business Solutions. Use of this website or our services constitutes your acknowledgment and acceptance of this Disclaimer.
+  </div>
+
+  <!-- 1 -->
+  <div class="doc-section" id="s1">
+    <div class="section-num">01</div>
+    <h2 class="section-title">General Information Disclaimer</h2>
+    <p>The information published on <a href="https://www.leapbusiness.in/" style="color:var(--accent-bg)">www.leapbusiness.in</a> — including articles, FAQs, guides, checklists, blog posts, and other content — is provided for <strong>general informational and educational purposes only</strong>.</p>
+    <p>While LEAP Business Solutions endeavours to keep the information accurate, complete, and up to date, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information on this website for any particular purpose.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="doc-section" id="s2">
+    <div class="section-num">02</div>
+    <h2 class="section-title">No Legal or Professional Advice</h2>
+    <p>Nothing on this website constitutes <strong>legal advice, statutory advice, or a professional opinion</strong> in any legal, regulatory, or compliance matter. The content is informational in nature and should not be relied upon as a substitute for formal advice from a qualified legal practitioner, chartered accountant, or other licensed professional.</p>
+    <div class="highlight-box">
+      <strong>Please Note:</strong> LEAP Business Solutions is a compliance consultancy firm. Our team members are experienced compliance professionals. However, reading or downloading content from this website does not create a client-consultant relationship. A formal engagement is required before any reliance on our advice is appropriate.
+    </div>
+    <p>If you require advice on a specific situation or legal matter, we encourage you to contact us directly or consult an appropriate professional.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="doc-section" id="s3">
+    <div class="section-num">03</div>
+    <h2 class="section-title">Accuracy of Information</h2>
+    <p>Indian labour law is a complex and evolving area. While LEAP's team works diligently to provide accurate and current information, we cannot guarantee that all content on this website is:</p>
+    <ul>
+      <li>Free from errors, omissions, or typographical mistakes</li>
+      <li>Reflective of the most recent legal or regulatory amendments</li>
+      <li>Applicable to your specific jurisdiction, industry, or business circumstances</li>
+      <li>Complete with regard to all applicable statutes, rules, or notifications</li>
+    </ul>
+    <p>You are advised to verify any information independently or contact our team to confirm applicability to your specific situation before acting on it.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="doc-section" id="s4">
+    <div class="section-num">04</div>
+    <h2 class="section-title">Regulatory &amp; Statutory Updates</h2>
+    <p>Labour laws, contribution rates, thresholds, filing deadlines, and statutory requirements in India are subject to periodic amendment by central and state governments. LEAP strives to update its website and resources promptly, but:</p>
+    <ul>
+      <li>There may be a delay between when a regulatory change is notified and when it is reflected on this website</li>
+      <li>State-specific regulations may vary significantly and may not all be covered comprehensively on this website</li>
+      <li>Government circulars, office orders, and informal guidance issued by authorities may not always be captured on publicly available websites including ours</li>
+    </ul>
+    <p>LEAP shall not be liable for any action taken or not taken based on outdated or jurisdiction-specific information available on this website.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="doc-section" id="s5">
+    <div class="section-num">05</div>
+    <h2 class="section-title">Free Audit Disclaimer</h2>
+    <p>LEAP Business Solutions offers a complimentary compliance audit to prospective clients. The following conditions apply to this offer:</p>
+    <ul>
+      <li>The free audit is a preliminary assessment based on information voluntarily shared by the client and is <strong>not a comprehensive or exhaustive compliance review</strong></li>
+      <li>The audit report or findings shared during the free audit are indicative in nature and may not capture all compliance gaps</li>
+      <li>LEAP does not guarantee the accuracy or completeness of findings from the free audit, as it is based solely on the information provided by the prospective client</li>
+      <li>The free audit does not constitute a formal engagement or create any binding obligations on either party</li>
+      <li>LEAP reserves the right to withdraw, modify, or limit this offer at any time without prior notice</li>
+    </ul>
+  </div>
+
+  <!-- 6 -->
+  <div class="doc-section" id="s6">
+    <div class="section-num">06</div>
+    <h2 class="section-title">No Guarantee of Outcomes</h2>
+    <p>While LEAP Business Solutions maintains a strong track record of compliance management, we do not guarantee specific outcomes, including:</p>
+    <ul>
+      <li>Avoidance of all statutory penalties, interest, or notices — as these may arise due to factors beyond our control</li>
+      <li>Favourable outcomes in disputes with government authorities, inspectors, or courts</li>
+      <li>Uninterrupted access to government portals (EPFO, ESIC, state PT portals, etc.) which are managed by third parties</li>
+      <li>Timely processing by government departments or authorities of filings and applications submitted on your behalf</li>
+    </ul>
+    <div class="caution-box">
+      <strong>Compliance outcomes</strong> depend heavily on timely and accurate inputs from clients, as well as the discretion of regulatory authorities. LEAP's role is to advise and assist — not to guarantee regulatory decisions.
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="doc-section" id="s7">
+    <div class="section-num">07</div>
+    <h2 class="section-title">Third-Party Content &amp; Links</h2>
+    <p>This website may contain links to or references from third-party websites, including government portals such as EPFO, ESIC, MCA, and state tax departments. These links are provided for your convenience only.</p>
+    <ul>
+      <li>LEAP does not endorse or take responsibility for the content, accuracy, or privacy practices of any third-party websites</li>
+      <li>Links to external websites do not constitute an affiliation, partnership, or endorsement by LEAP</li>
+      <li>LEAP is not liable for any content, products, or services available through third-party links</li>
+    </ul>
+    <p>We encourage you to review the terms and privacy policies of any third-party website you visit.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="doc-section" id="s8">
+    <div class="section-num">08</div>
+    <h2 class="section-title">Testimonials &amp; Results</h2>
+    <p>Any client testimonials, statistics, or results referenced on this website (such as "200+ clients served" or "100% compliance rate") reflect the general experience of our clients and the performance of our services to date.</p>
+    <ul>
+      <li>These figures are provided in good faith and are approximate in nature</li>
+      <li>Past performance or client outcomes are not a guarantee of future results</li>
+      <li>Individual results may vary based on the client's specific situation, cooperation, and applicable statutory requirements</li>
+    </ul>
+  </div>
+
+  <!-- 9 -->
+  <div class="doc-section" id="s9">
+    <div class="section-num">09</div>
+    <h2 class="section-title">Website Availability</h2>
+    <p>LEAP Business Solutions endeavours to keep its website available and operational at all times. However, we do not warrant that:</p>
+    <ul>
+      <li>The website will be continuously available or free from interruptions</li>
+      <li>The website will be free from viruses, malware, or other harmful components</li>
+      <li>Any errors or defects will be corrected immediately</li>
+    </ul>
+    <p>LEAP shall not be liable for any losses or damages arising from website downtime, technical errors, or unavailability.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="doc-section" id="s10">
+    <div class="section-num">10</div>
+    <h2 class="section-title">Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law, LEAP Business Solutions, its directors, employees, consultants, and affiliates shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from:</p>
+    <ul>
+      <li>Your reliance on any information, content, or resources published on this website</li>
+      <li>Errors or inaccuracies in the information published on this website</li>
+      <li>Interruption or unavailability of this website or its services</li>
+      <li>Any third-party content linked to or referenced from this website</li>
+    </ul>
+    <p>Your use of this website and reliance on its content is <strong>entirely at your own risk</strong>. If you are unsure about the applicability of any information, please contact us directly before acting on it.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="doc-section" id="s11">
+    <div class="section-num">11</div>
+    <h2 class="section-title">Contact &amp; Clarifications</h2>
+    <p>If you have any questions about this Disclaimer, or if you believe any information on this website is inaccurate or requires correction, please reach out to us. We value accuracy and transparency, and we welcome your feedback.</p>
+  </div>
+
+  <div class="contact-card">
+    <h3>LEAP Business Solutions</h3>
+    <p>Labour Law Compliance Consultants | Pan-India</p>
+    <p>📧 Email: <a href="mailto:support@leapbusiness.in">support@leapbusiness.in</a></p>
+    <p>📞 Phone: <a href="tel:+917977213501">+91 79772 13501</a></p>
+    <p>🌐 Website: <a href="https://www.leapbusiness.in/" target="_blank">www.leapbusiness.in</a></p>
+    <p style="margin-top:16px;font-size:13px;opacity:.5;">This Disclaimer is governed by the laws of India. Jurisdiction: Mumbai, Maharashtra.</p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 LEAP Business Solutions. All rights reserved. &nbsp;|&nbsp;
+  <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
+  <a href="terms-of-service.html">Terms of Service</a> &nbsp;|&nbsp;
+  <a href="disclaimer.html">Disclaimer</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – LEAP Business Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #1a1a2e;
+      --ink-soft:  #3d3d5c;
+      --accent:    #c0392b;
+      --accent-lt: #fdf0ef;
+      --gold:      #e8a838;
+      --rule:      #e0ddd8;
+      --bg:        #faf9f7;
+      --card:      #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--ink);
+      color: #fff;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(0,0,0,.35);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-badge {
+      width: 42px; height: 42px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: grid; place-items: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700;
+      color: #fff; letter-spacing: -1px;
+    }
+    .logo-text { color: #fff; }
+    .logo-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; letter-spacing: .5px; }
+    .logo-text span { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; opacity: .6; }
+    .header-tag {
+      font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+      background: var(--accent); color: #fff;
+      padding: 5px 14px; border-radius: 4px;
+    }
+
+    /* ── HERO BAND ── */
+    .page-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4e 60%, #1a1a2e 100%);
+      color: #fff;
+      padding: 64px 40px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,.02) 40px,
+        rgba(255,255,255,.02) 41px
+      );
+    }
+    .page-hero .eyebrow {
+      font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 16px;
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700; line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .page-hero .meta {
+      font-size: 14px; opacity: .65; letter-spacing: .5px;
+    }
+    .page-hero .meta span { color: var(--gold); }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 40px 80px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-bottom: 52px;
+    }
+    .toc h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--ink-soft); margin-bottom: 16px;
+    }
+    .toc ol { list-style: none; counter-reset: toc; }
+    .toc ol li { counter-increment: toc; margin-bottom: 8px; }
+    .toc ol li::before {
+      content: counter(toc, decimal-leading-zero) ". ";
+      color: var(--accent); font-weight: 600; font-size: 14px;
+    }
+    .toc a {
+      color: var(--ink); text-decoration: none;
+      font-size: 15px; font-weight: 400;
+      border-bottom: 1px dotted var(--rule);
+      transition: color .2s;
+    }
+    .toc a:hover { color: var(--accent); }
+
+    /* ── SECTIONS ── */
+    .doc-section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .doc-section:last-child { border-bottom: none; }
+
+    .section-num {
+      font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--accent); font-weight: 600; margin-bottom: 8px;
+    }
+
+    h2.section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 700;
+      color: var(--ink); margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    p { margin-bottom: 16px; color: var(--ink-soft); }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      margin: 16px 0 16px 24px;
+      color: var(--ink-soft);
+    }
+    li { margin-bottom: 8px; }
+
+    .highlight-box {
+      background: var(--accent-lt);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 18px 24px;
+      margin: 24px 0;
+      font-size: 15px;
+    }
+    .highlight-box strong { color: var(--accent); }
+
+    strong { color: var(--ink); font-weight: 600; }
+    em { font-style: italic; }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 12px;
+      padding: 36px 40px;
+      margin-top: 52px;
+    }
+    .contact-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; margin-bottom: 12px; color: #fff;
+    }
+    .contact-card p { color: rgba(255,255,255,.7); margin-bottom: 8px; }
+    .contact-card a { color: var(--gold); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.45);
+      text-align: center;
+      font-size: 13px;
+      padding: 24px 40px;
+      letter-spacing: .3px;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 14px 20px; }
+      .page-hero { padding: 44px 20px 36px; }
+      .page-wrap { padding: 36px 20px 60px; }
+      .toc { padding: 20px; }
+      .contact-card { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo-wrap" href="https://www.leapbusiness.in/">
+      <div class="logo-badge">LB</div>
+      <div class="logo-text">
+        <strong>LEAP Business Solutions</strong>
+        <span>Labour Law Compliance Consultants</span>
+      </div>
+    </a>
+    <span class="header-tag">Privacy Policy</span>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="eyebrow">Legal Documentation</div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective Date: <span>April 25, 2025</span> &nbsp;·&nbsp; Last Revised: <span>April 25, 2025</span></p>
+</section>
+
+<div class="page-wrap">
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Legal Basis for Processing</a></li>
+      <li><a href="#s4">Sharing &amp; Disclosure</a></li>
+      <li><a href="#s5">Data Security</a></li>
+      <li><a href="#s6">Data Retention</a></li>
+      <li><a href="#s7">Your Rights</a></li>
+      <li><a href="#s8">Cookies &amp; Tracking</a></li>
+      <li><a href="#s9">Third-Party Links</a></li>
+      <li><a href="#s10">Children's Privacy</a></li>
+      <li><a href="#s11">Changes to This Policy</a></li>
+      <li><a href="#s12">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <div class="highlight-box">
+    <strong>Overview:</strong> LEAP Business Solutions ("LEAP," "we," "our," or "us") is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, store, and protect your data when you visit <a href="https://www.leapbusiness.in/" style="color:var(--accent)">www.leapbusiness.in</a> or engage our services.
+  </div>
+
+  <!-- 1 -->
+  <div class="doc-section" id="s1">
+    <div class="section-num">01</div>
+    <h2 class="section-title">Information We Collect</h2>
+    <p>We collect information in two ways — information you provide directly to us, and information collected automatically when you use our website.</p>
+    <p><strong>Information You Provide:</strong></p>
+    <ul>
+      <li>Name, designation, company name, and contact details (phone number, email address)</li>
+      <li>Business information such as industry, employee count, and states of operation</li>
+      <li>Details shared during consultation calls, audit requests, or service enquiries</li>
+      <li>Documents voluntarily submitted for compliance review (e.g., existing filings, certificates)</li>
+      <li>Any correspondence or communications you send to us via email or contact forms</li>
+    </ul>
+    <p><strong>Information Collected Automatically:</strong></p>
+    <ul>
+      <li>IP address, browser type, operating system, and device information</li>
+      <li>Pages visited, time spent on pages, and referring URLs</li>
+      <li>Cookie identifiers and analytics data (see Section 8)</li>
+    </ul>
+  </div>
+
+  <!-- 2 -->
+  <div class="doc-section" id="s2">
+    <div class="section-num">02</div>
+    <h2 class="section-title">How We Use Your Information</h2>
+    <p>We use the information collected for the following purposes:</p>
+    <ul>
+      <li>To respond to your enquiries, consultation requests, and service queries</li>
+      <li>To conduct the free compliance audit you have requested</li>
+      <li>To deliver our contracted services including PF, ESIC, PT, LWF, Payroll, and Labour Law Audit services</li>
+      <li>To send compliance reminders, statutory updates, and filing deadline alerts relevant to your business</li>
+      <li>To improve our website, services, and user experience based on aggregate analytics</li>
+      <li>To send newsletters or promotional content — only with your consent, with an opt-out option in every communication</li>
+      <li>To comply with applicable laws, regulations, and government requirements</li>
+      <li>To maintain records for internal auditing and quality assurance purposes</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="doc-section" id="s3">
+    <div class="section-num">03</div>
+    <h2 class="section-title">Legal Basis for Processing</h2>
+    <p>We process your personal data on the following legal grounds under applicable Indian data protection law (including the Digital Personal Data Protection Act, 2023):</p>
+    <ul>
+      <li><strong>Consent:</strong> Where you have expressly consented to the collection and use of your data</li>
+      <li><strong>Contractual Necessity:</strong> Where processing is necessary to fulfil a service agreement with you</li>
+      <li><strong>Legitimate Interests:</strong> Where processing is necessary for our legitimate business interests and does not override your rights</li>
+      <li><strong>Legal Obligation:</strong> Where processing is required to comply with applicable Indian laws and statutory requirements</li>
+    </ul>
+  </div>
+
+  <!-- 4 -->
+  <div class="doc-section" id="s4">
+    <div class="section-num">04</div>
+    <h2 class="section-title">Sharing &amp; Disclosure</h2>
+    <p>We do <strong>not</strong> sell, rent, or trade your personal information to third parties. We may share your information in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Service Providers:</strong> Trusted third-party vendors who assist us in operating our website or delivering services (e.g., cloud hosting, email service providers), bound by confidentiality obligations</li>
+      <li><strong>Statutory Authorities:</strong> Government portals such as EPFO, ESIC, state PT authorities, or LWF boards, strictly for the purpose of filing and compliance on your behalf</li>
+      <li><strong>Legal Requirements:</strong> When required by law, court order, or government authority</li>
+      <li><strong>Business Transfer:</strong> In the event of a merger, acquisition, or sale of assets, your data may be transferred as part of that transaction, with prior notice to you</li>
+    </ul>
+  </div>
+
+  <!-- 5 -->
+  <div class="doc-section" id="s5">
+    <div class="section-num">05</div>
+    <h2 class="section-title">Data Security</h2>
+    <p>We implement reasonable technical and organisational security measures to protect your personal data against unauthorised access, disclosure, alteration, or destruction. These include:</p>
+    <ul>
+      <li>SSL/TLS encryption for data transmitted through our website</li>
+      <li>Restricted access to personal data on a need-to-know basis</li>
+      <li>Secure storage practices for client documents and statutory records</li>
+      <li>Regular review of our data collection, storage, and processing practices</li>
+    </ul>
+    <div class="highlight-box">
+      <strong>Please Note:</strong> No method of data transmission over the internet or electronic storage is completely secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee absolute security.
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="doc-section" id="s6">
+    <div class="section-num">06</div>
+    <h2 class="section-title">Data Retention</h2>
+    <p>We retain your personal information only for as long as necessary to fulfil the purposes outlined in this Policy, or as required by applicable law. Specifically:</p>
+    <ul>
+      <li>Client data relating to statutory filings and compliance records is retained for a minimum of <strong>8 years</strong> in accordance with applicable labour law requirements</li>
+      <li>Enquiry and contact data is retained for up to <strong>2 years</strong> or until the enquiry is resolved</li>
+      <li>Marketing-related data is retained until you withdraw consent or opt out</li>
+    </ul>
+    <p>Upon expiry of the retention period, your data is securely deleted or anonymised.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="doc-section" id="s7">
+    <div class="section-num">07</div>
+    <h2 class="section-title">Your Rights</h2>
+    <p>Subject to applicable law, you have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right of Access:</strong> Request a copy of the personal data we hold about you</li>
+      <li><strong>Right to Correction:</strong> Request correction of inaccurate or incomplete data</li>
+      <li><strong>Right to Erasure:</strong> Request deletion of your data (subject to legal retention obligations)</li>
+      <li><strong>Right to Withdraw Consent:</strong> Withdraw consent for marketing communications at any time</li>
+      <li><strong>Right to Grievance Redressal:</strong> Raise a grievance with us regarding processing of your data</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us at <strong>support@leapbusiness.in</strong>. We will respond within 30 days of receiving your request.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="doc-section" id="s8">
+    <div class="section-num">08</div>
+    <h2 class="section-title">Cookies &amp; Tracking</h2>
+    <p>Our website uses cookies and similar tracking technologies to improve your browsing experience and analyse website traffic. Types of cookies we use:</p>
+    <ul>
+      <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>
+      <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our site (e.g., Google Analytics)</li>
+      <li><strong>Preference Cookies:</strong> Remember your settings and preferences</li>
+    </ul>
+    <p>You can control or disable cookies through your browser settings. Disabling certain cookies may affect website functionality. By continuing to use our website, you consent to our use of cookies as described herein.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="doc-section" id="s9">
+    <div class="section-num">09</div>
+    <h2 class="section-title">Third-Party Links</h2>
+    <p>Our website may contain links to third-party websites such as government portals (EPFO, ESIC) or informational resources. We have no control over the content, privacy practices, or policies of these external sites. We encourage you to review their privacy policies before providing any personal information.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="doc-section" id="s10">
+    <div class="section-num">10</div>
+    <h2 class="section-title">Children's Privacy</h2>
+    <p>Our services are directed exclusively at businesses and professionals. We do not knowingly collect personal data from individuals under the age of 18. If we become aware that personal data of a minor has been submitted to us, we will delete it promptly.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="doc-section" id="s11">
+    <div class="section-num">11</div>
+    <h2 class="section-title">Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. The revised policy will be posted on this page with an updated "Last Revised" date. We encourage you to review this page periodically.</p>
+    <p>For material changes, we will notify existing clients via email prior to the change taking effect.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="doc-section" id="s12">
+    <div class="section-num">12</div>
+    <h2 class="section-title">Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please reach out to us:</p>
+  </div>
+
+  <div class="contact-card">
+    <h3>LEAP Business Solutions</h3>
+    <p>Labour Law Compliance Consultants | Pan-India</p>
+    <p>📧 Email: <a href="mailto:support@leapbusiness.in">support@leapbusiness.in</a></p>
+    <p>📞 Phone: <a href="tel:+917977213501">+91 79772 13501</a></p>
+    <p>🌐 Website: <a href="https://www.leapbusiness.in/" target="_blank">www.leapbusiness.in</a></p>
+    <p style="margin-top:16px;font-size:13px;opacity:.5;">This document is governed by the laws of India. Any disputes shall be subject to the jurisdiction of competent courts in Mumbai, Maharashtra.</p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 LEAP Business Solutions. All rights reserved. &nbsp;|&nbsp;
+  <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
+  <a href="terms-of-service.html">Terms of Service</a> &nbsp;|&nbsp;
+  <a href="disclaimer.html">Disclaimer</a>
+</footer>
+
+</body>
+</html>

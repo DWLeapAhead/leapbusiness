@@ -52,6 +52,7 @@ function renderNavbar(activePage) {
       <a href="blog.html">Resources / Blog</a>
       <a href="faq.html">FAQs</a>
       <a href="contact.html">Contact</a>
+      <a href="knowledge.html">Knowledge</a>
       <a href="tel:+917977213501" class="mobile-cta-link">📞 +91 79772 13501 – Free Audit</a>
     </div>
   </nav>`;

@@ -149,9 +149,9 @@ function renderFooter() {
         <div class="footer-bottom">
           <span>© 2025 LEAP Business Solutions. All rights reserved. | Mumbai, India</span>
           <div class="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Disclaimer</a>
+            <a href="https://www.leapbusiness.in/privacy-policy.html">Privacy Policy</a>
+            <a href="https://www.leapbusiness.in/terms-of-service.html">Terms of Service</a>
+            <a href="https://www.leapbusiness.in/disclaimer.html">Disclaimer</a>
           </div>
         </div>
       </div>
